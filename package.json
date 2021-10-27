@@ -1,0 +1,56 @@
+{
+  "name": "semi-admin",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "preview": "vite preview",
+    "build:dev": "tsc && vite build --mode dev",
+    "build:test": "tsc && vite build --mode test",
+    "build:prod": "tsc && vite build --mode prod",
+    "prepare": "husky install",
+    "pre-commit": "yarn lint-staged",
+    "lint": "tsc --noEmit &&  eslint src --ext .ts,.tsx ",
+    "lint:fix": "tsc --noEmit && eslint --fix --ext src --ext .ts,.tsx",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\"",
+    "commit": "git-cz"
+  },
+  "dependencies": {
+    "@douyinfe/semi-ui": "^2.0.0",
+    "axios": "^0.24.0",
+    "driver.js": "^0.9.8",
+    "history": "^5.0.1",
+    "husky": "^7.0.4",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "6.0.0-beta.0",
+    "zustand": "^3.6.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@types/node": "^16.11.6",
+    "@types/qs": "^6.9.7",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "@vitejs/plugin-react": "^1.0.0",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^8.1.0",
+    "lint-staged": "^11.2.6",
+    "mockjs": "^1.1.0",
+    "prettier": "^2.4.1",
+    "qs": "^6.10.1",
+    "scss": "^0.2.4",
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4",
+    "vite-plugin-mock": "^2.9.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  }
+}
