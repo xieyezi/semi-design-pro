@@ -20,8 +20,7 @@ The best practices for React Hooks + Vite + Semi + Zustand + Typescript🚀.
 
 ## ⚡preview
 
-![dashboard.png](https://i.loli.net/2021/06/29/Q8DqaBeK4NngzE1.png)
-
+developing...
 
 ## 📦 Install
 

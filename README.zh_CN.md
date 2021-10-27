@@ -19,7 +19,7 @@ React Hooks + Vite + Semi + Zustand + Typescript 最佳实践🚀.
 
 ## ⚡preview
 
-![dashboard.png](https://i.loli.net/2021/06/29/Q8DqaBeK4NngzE1.png)
+开发中...
 
 ## 📦 使用
 
