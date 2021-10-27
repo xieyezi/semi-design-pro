@@ -2,7 +2,6 @@ English | [简体中文](./README.zh_CN.md)
 
 <h1 align="center">Semi Admin</h1>
 
-<div align="center">
 
 React Hooks + Vite + Semi + Zustand + Typescript 最佳实践🚀.
 
