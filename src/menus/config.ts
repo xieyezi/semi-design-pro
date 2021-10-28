@@ -1,55 +1,164 @@
-import { IconHome, IconComponent } from '@douyinfe/semi-icons'
+import {
+	IconHome,
+	IconEdit,
+	IconGridRectangle,
+	IconApps,
+	IconTickCircle,
+	IconAlertTriangle,
+	IconUser
+} from '@douyinfe/semi-icons'
 
 export interface MenuItem {
-	key: string
-	title: string
+	itemKey: string
+	text: string
 	icon?: React.ReactNode
 	path?: string
-	children?: MenuItem[]
+	items?: MenuItem[]
 	component?: React.ComponentType<any>
 }
 
 const MENU_CONFIG: MenuItem[] = [
 	{
-		key: '1',
-		title: '工作台',
+		itemKey: '1',
+		text: 'DashBoard',
 		icon: IconHome,
-		path: '/dashboard'
+		items: [
+			{
+				itemKey: '1-1',
+				text: '工作台',
+				path: '/dashboard/workbeach'
+			},
+			{
+				itemKey: '1-2',
+				text: '分析页',
+				path: '/dashboard/anlyanis'
+			},
+			{
+				itemKey: '1-3',
+				text: '监控页',
+				path: '/dashboard/monitor'
+			}
+		]
 	},
 	{
-		key: '2',
-		title: '页面',
-		icon: IconComponent,
-		children: [
+		itemKey: '2',
+		text: '表单页',
+		icon: IconEdit,
+		items: [
 			{
-				key: '2-1',
-				title: '表单页',
-				path: '/form'
+				itemKey: '2-1',
+				text: '基础表单',
+				path: '/form/basic'
 			},
 			{
-				key: '2-2',
-				title: '详情页',
-				path: '/detail'
+				itemKey: '2-2',
+				text: '分步表单',
+				path: '/form/step'
 			},
 			{
-				key: '2-3',
-				title: '结果页',
-				path: '/result'
+				itemKey: '2-3',
+				text: '高级表单',
+				path: '/form/advanced'
+			}
+		]
+	},
+	{
+		itemKey: '3',
+		text: '列表页',
+		icon: IconGridRectangle,
+		items: [
+			{
+				itemKey: '3-1',
+				text: '搜索列表',
+				path: '/list/search'
 			},
 			{
-				key: '2-4',
-				title: '个人页',
-				path: '/user'
+				itemKey: '3-2',
+				text: '查询表格',
+				path: '/list/inquire'
 			},
 			{
-				key: '2-5',
-				title: '异常页',
-				path: '/404'
+				itemKey: '3-3',
+				text: '标准列表',
+				path: '/list/standard'
 			},
 			{
-				key: '2-6',
-				title: '列表页',
-				path: '/list'
+				itemKey: '3-4',
+				text: '卡片列表',
+				path: '/list/card'
+			}
+		]
+	},
+	{
+		itemKey: '4',
+		text: '详情页',
+		icon: IconApps,
+		items: [
+			{
+				itemKey: '4-1',
+				text: '基础详情页',
+				path: '/detail/basic'
+			},
+			{
+				itemKey: '4-2',
+				text: '高级详情页',
+				path: '/detail/advanced'
+			}
+		]
+	},
+	{
+		itemKey: '5',
+		text: '结果页',
+		icon: IconTickCircle,
+		items: [
+			{
+				itemKey: '5-1',
+				text: '成功页',
+				path: '/result/success'
+			},
+			{
+				itemKey: '5-2',
+				text: '失败页',
+				path: '/result/failed'
+			}
+		]
+	},
+	{
+		itemKey: '6',
+		text: '异常页',
+		icon: IconAlertTriangle,
+		items: [
+			{
+				itemKey: '6-1',
+				text: '403',
+				path: '/abnormal/403'
+			},
+			{
+				itemKey: '6-2',
+				text: '404',
+				path: '/abnormal/404'
+			},
+			{
+				itemKey: '6-3',
+				text: '500',
+				path: '/abnormal/500'
+			}
+		]
+	},
+	{
+		itemKey: '7',
+		text: '个人页',
+		icon: IconUser,
+		items: [
+			{
+				itemKey: '7-1',
+				text: '个人中心',
+				path: '/user/center'
+			},
+			{
+				itemKey: '7-2',
+				text: '个人设置',
+				path: '/user/settings'
 			}
 		]
 	}

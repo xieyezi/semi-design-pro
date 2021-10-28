@@ -6,7 +6,6 @@ import RenderRouter from './router'
 import './App.scss'
 
 function App() {
-
 	return (
 		<LocaleProvider locale={zh_CN}>
 			<BrowserRouter>

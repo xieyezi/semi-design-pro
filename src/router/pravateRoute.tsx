@@ -5,11 +5,16 @@ import { RouteProps, useLocation } from 'react-router'
 
 const PrivateRoute: FC<RouteProps> = (props) => {
 	const location = useLocation()
+	const { pathname } = location
 	// const logged = useStore((state) => state.logged)
 	const logged = true
 
 	return logged ? (
-		<Route {...props} />
+		pathname === '/' ? (
+			<Navigate to={{ pathname: `/dashboard/workbeach` }} replace />
+		) : (
+			<Route {...props} />
+		)
 	) : (
 		<Navigate to={{ pathname: `/login${'?from=' + encodeURIComponent(location.pathname)}` }} replace />
 	)
