@@ -2,11 +2,11 @@ import React, { useMemo } from 'react'
 import { LocaleProvider } from '@douyinfe/semi-ui'
 import { IntlProvider } from 'react-intl'
 import { BrowserRouter } from 'react-router-dom'
-import RenderRouter from './router'
-import useStore from './store/common/global'
 import zh_CN from '@douyinfe/semi-ui/lib/es/locale/source/zh_CN'
 import en_GB from '@douyinfe/semi-ui/lib/es/locale/source/en_GB'
+import useStore from './store/common/global'
 import { localeConfig } from './locales'
+import RenderRouter from './router'
 import './App.scss'
 
 function App() {
