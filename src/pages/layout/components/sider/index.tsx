@@ -3,7 +3,10 @@ import { Layout, Nav } from '@douyinfe/semi-ui'
 import { IconSemiLogo } from '@douyinfe/semi-icons'
 import menuList, { MenuItem } from '@src/menus/config'
 import { useLocation, useNavigate } from 'react-router'
+import { useLocale } from '@src/locales'
+import useStore from '@src/store/common/global'
 import '../../index.scss'
+
 const { Sider } = Layout
 
 function renderIcon(icon: any) {
@@ -32,17 +35,29 @@ function findMenuByPath(menus: MenuItem[], path: string, keys: any[]): any {
 const Index: FC = () => {
 	const navigate = useNavigate()
 	const { pathname } = useLocation()
+	const { formatMessage } = useLocale()
 	const [openKeys, setOpenKeys] = useState<string[]>([])
 	const [selectedKeys, setSelectedKeys] = useState<string[]>([])
+	const locale = useStore((state) => state.locale)
 
 	const navList = useMemo(() => {
 		return menuList.map((e) => {
 			return {
 				...e,
-				icon: e?.icon ? renderIcon(e.icon) : null
+				text: formatMessage({ id: e.text }),
+				icon: e?.icon ? renderIcon(e.icon) : null,
+				items: e?.items
+					? e.items.map((m) => {
+							return {
+								...m,
+								text: formatMessage({ id: m.text }),
+								icon: m.icon ? renderIcon(m.icon) : null
+							}
+					  })
+					: []
 			}
 		})
-	}, [menuList])
+	}, [menuList, locale])
 
 	const onSelect = (data) => {
 		setSelectedKeys([...data.selectedKeys])
