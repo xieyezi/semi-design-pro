@@ -1,16 +1,22 @@
 import create from 'zustand'
+import zh_CN from '@douyinfe/semi-ui/lib/es/locale/source/zh_CN'
+import en_GB from '@douyinfe/semi-ui/lib/es/locale/source/en_GB'
 
-/**
- * 此store用于网络请求的loading加载状态
- */
 export interface GlobalState {
+	locale: Locale | any
 	loading: boolean
 	toogleLoading: (val: boolean) => void
+	changeLocale: (val: 'zh_CN' | 'en_GB') => void
 }
 
 const store = create<GlobalState>((set, get) => ({
+	locale: zh_CN,
 	loading: false,
-	toogleLoading: (val = false) => set({ loading: val })
+	toogleLoading: (val = false) => set({ loading: val }),
+	changeLocale: (val: 'zh_CN' | 'en_GB') => {
+		if (val === 'zh_CN') set({ locale: zh_CN })
+		else set({ locale: en_GB })
+	}
 }))
 
 const { getState, setState, subscribe, destroy } = store

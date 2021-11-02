@@ -4,9 +4,6 @@ import { IconSemiLogo } from '@douyinfe/semi-icons'
 import menuList, { MenuItem } from '@src/menus/config'
 import { useLocation, useNavigate } from 'react-router'
 import '../../index.scss'
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 const { Sider } = Layout
 
 function renderIcon(icon: any) {
@@ -73,7 +70,7 @@ const Index: FC = () => {
 				style={{ maxWidth: 220, height: '100%' }}
 				header={{
 					logo: <IconSemiLogo style={{ fontSize: 36 }} />,
-					text: 'Semi React Admin'
+					text: 'Semi Admin'
 				}}
 				footer={{
 					collapseButton: true

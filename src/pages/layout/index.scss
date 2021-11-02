@@ -4,8 +4,25 @@
 	.layout-content {
 		padding: 24px 24px 74px 24px;
 		background-color: #f0f2f5;
+		> :last-child {
+			padding: 24px;
+			background-color: #fff;
+			height: 100%;
+		}
 	}
 	.layout-header {
 		background-color: var(--semi-color-bg-1);
+	}
+	.semi-badge-rightTop {
+		position: absolute;
+		top: 8px;
+		right: 20px;
+		transform: translate(50%, -50%);
+		transform-origin: 100% 0%;
+	}
+	.semi-radio-addon-buttonRadio-checked {
+		font-weight: 600;
+		background: var(--semi-color-bg-3);
+		color: var(--semi-color-text-1);
 	}
 }
