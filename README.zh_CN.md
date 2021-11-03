@@ -23,8 +23,8 @@ React Hooks + Vite + Semi + Zustand + Typescript 最佳实践🚀.
 ## 📦 使用
 
 ```bash
-$ git clone https://github.com/xieyezi/semi-admin.git
-$ cd semi-admin
+$ git clone https://github.com/xieyezi/semi-design-pro
+$ cd semi-design-pro
 
 
 # yarn

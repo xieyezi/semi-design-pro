@@ -24,8 +24,8 @@ developing...
 ## 📦 Install
 
 ```bash
-$ git clone https://github.com/xieyezi/semi-admin
-$ cd semi-admin
+$ git clone https://github.com/xieyezi/semi-design-pro
+$ cd semi-design-pro
 
 
 # yarn
