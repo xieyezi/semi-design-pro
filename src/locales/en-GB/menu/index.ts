@@ -5,19 +5,19 @@ export const enGB_menu = {
 	'app.menu.dashboard.monitor': 'Monitor',
 
 	'app.menu.form': 'Form',
-	'app.menu.form.basic': 'Basic',
-	'app.menu.form.step': 'Step',
-	'app.menu.form.advanced': 'Advanced',
+	'app.menu.form.basic': 'Basic Form',
+	'app.menu.form.step': 'Step Form',
+	'app.menu.form.advanced': 'Advanced Form',
 
 	'app.menu.list': 'List',
-	'app.menu.list.search': 'Search',
-	'app.menu.list.inquire': 'Inquire',
-	'app.menu.list.standard': 'Standard',
-	'app.menu.list.card': 'Card',
+	'app.menu.list.search': 'Search List',
+	'app.menu.list.inquire': 'Inquire Table',
+	'app.menu.list.standard': 'Standard List',
+	'app.menu.list.card': 'Card List',
 
 	'app.detail': 'Detail',
-	'app.detail.basic': 'Basic',
-	'app.detail.advanced': 'Advanced',
+	'app.detail.basic': 'Basic Detail',
+	'app.detail.advanced': 'Advanced Detail',
 
 	'app.result': 'Result',
 	'app.result.success': 'Success',
@@ -29,6 +29,6 @@ export const enGB_menu = {
 	'app.abnormal.500': '500',
 
 	'app.user': 'User',
-	'app.user.center': 'Center',
-	'app.user.settings': 'Settings'
+	'app.user.center': 'User Center',
+	'app.user.settings': 'User Settings'
 }
