@@ -73,7 +73,7 @@ const Index: React.FC = () => {
 						<div className="workbeach-container-header-content-left-user">
 							<p className="workbeach-container-header-content-left-username">早安，吴彦祖，祝你开心每一天！</p>
 							<p className="workbeach-container-header-content-left-user-profile">
-								交互专家 |蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED
+								前端专家 |字节跳动－某某某事业群－某某平台部
 							</p>
 						</div>
 					</div>
