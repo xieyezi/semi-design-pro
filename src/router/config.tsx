@@ -13,7 +13,7 @@ export interface WrapperRouteProps extends RouteProps {
 const WrapperRouteComponent: FC<WrapperRouteProps> = ({ titleId, auth, ...props }) => {
 	const WitchRoute = auth ? PrivateRoute : Route
 	if (titleId) {
-		document.title = titleId
+		document.title = `${titleId} - Semi Desgin Pro`
 	}
 	return <WitchRoute {...props} />
 }

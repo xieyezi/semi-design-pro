@@ -1,12 +1,11 @@
 .layout-page {
 	border: 1px solid var(--semi-color-border);
 	height: 100%;
+	background: #f0f2f5;
 	.layout-content {
-		padding: 24px 24px 74px 24px;
-		background-color: #f0f2f5;
+		position: relative;
+		margin: 24px;
 		> :last-child {
-			padding: 24px;
-			background-color: #fff;
 			height: 100%;
 		}
 	}
