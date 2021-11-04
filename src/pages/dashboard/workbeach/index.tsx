@@ -1,4 +1,4 @@
-import { Avatar, Descriptions, Col, Row, CardGroup, Card, Typography, Space } from '@douyinfe/semi-ui'
+import { Avatar, Descriptions, Col, Row, CardGroup, Card, Typography, List } from '@douyinfe/semi-ui'
 import React from 'react'
 import './index.scss'
 
@@ -58,6 +58,44 @@ const inProcessData = [
 	}
 ]
 
+const motion = [
+	{
+		user: '曲丽丽',
+		group: '高逼格设计天团',
+		action: '新建项目',
+		project: '六月迭代',
+		color: 'purple'
+	},
+	{
+		user: '付芳芳',
+		group: '高逼格设计天团',
+		action: '新建项目',
+		project: '六月迭代',
+		color: 'blue'
+	},
+	{
+		user: '林东东',
+		group: '高逼格设计天团',
+		action: '新建项目',
+		project: '六月迭代',
+		color: 'cyan'
+	},
+	{
+		user: '苏小小',
+		group: '5月日常迭代',
+		action: '更新至已发布状态',
+		project: '',
+		color: 'orange'
+	},
+	{
+		user: '朱偏右',
+		group: '工程效能',
+		action: '发布了',
+		project: '留言',
+		color: 'amber'
+	}
+]
+
 const Index: React.FC = () => {
 	return (
 		<div className="workbeach-container">
@@ -73,7 +111,7 @@ const Index: React.FC = () => {
 						<div className="workbeach-container-header-content-left-user">
 							<p className="workbeach-container-header-content-left-username">早安，吴彦祖，祝你开心每一天！</p>
 							<p className="workbeach-container-header-content-left-user-profile">
-								前端专家 |字节跳动－某某某事业群－某某平台部
+								前端专家 | 字节跳动－某某某事业群－某某平台部
 							</p>
 						</div>
 					</div>
@@ -86,7 +124,12 @@ const Index: React.FC = () => {
 				<Row gutter={24}>
 					<Col span={16}>
 						<div className="workbeach-container-content-left1">
-							<Card title="进行中的项目" bordered={false} headerExtraContent={<Text link>全部项目</Text>}>
+							<Card
+								title="进行中的项目"
+								className="workbeach-container-content-left1-card"
+								bordered={false}
+								headerExtraContent={<Text link>全部项目</Text>}
+							>
 								<CardGroup type="grid">
 									{inProcessData.map((v, idx) => (
 										<Card
@@ -109,7 +152,29 @@ const Index: React.FC = () => {
 							</Card>
 						</div>
 						<div className="workbeach-container-content-left2">
-							<Card title="最近动态" bordered={false}></Card>
+							<Card title="最近动态" bordered={false}>
+								<List
+									size="large"
+									dataSource={motion}
+									renderItem={(item) => (
+										<List.Item
+											header={<Avatar color={item.color}>{item.user.substring(1)}</Avatar>}
+											main={
+												<>
+													<div className="workbeach-container-content-left2-content">
+														{' '}
+														<span className="workbeach-container-content-left2-content-user">{item.user}</span> 在{' '}
+														<a className="workbeach-container-content-left2-content-link">{item.group}</a>{' '}
+														<span>{item.action}</span>{' '}
+														<a className="workbeach-container-content-left2-content-link">{item.project}</a>
+													</div>
+													{'7分钟前'}
+												</>
+											}
+										/>
+									)}
+								/>
+							</Card>
 						</div>
 					</Col>
 					<Col span={8}>

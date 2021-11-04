@@ -50,22 +50,44 @@
 		margin: 24px 24px 0;
 		.workbeach-container-content-left1 {
 			width: 100%;
-			.workbeach-container-content-left1-card-item {
-				width: 33.3%;
-				height: 100%;
-				.workbeach-container-content-left1-card-item-footer {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					color: rgba(0, 0, 0, 0.45);
-					overflow: hidden;
-					white-space: nowrap;
-					text-overflow: ellipsis;
+			.workbeach-container-content-left1-card {
+				> :last-child {
+					padding: 0;
+				}
+				.workbeach-container-content-left1-card-item {
+					width: 33.33%;
+					height: 100%;
+					.workbeach-container-content-left1-card-item-footer {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						color: rgba(0, 0, 0, 0.45);
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
 				}
 			}
 		}
 		.workbeach-container-content-left2 {
 			margin-top: 20px;
+			.workbeach-container-content-left2-content {
+				padding-bottom: 10px;
+				.workbeach-container-content-left2-content-user {
+					color: rgba(0, 0, 0, 0.85);
+					font-size: 14px;
+					line-height: 1.5715;
+					font-weight: 500;
+				}
+				.workbeach-container-content-left2-content-link {
+					color: #1890ff;
+					text-decoration: none;
+					background-color: transparent;
+					outline: none;
+					cursor: pointer;
+					transition: color 0.3s;
+				}
+			}
 		}
 	}
 }
