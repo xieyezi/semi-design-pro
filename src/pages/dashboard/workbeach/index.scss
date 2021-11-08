@@ -53,6 +53,9 @@
 			.workbeach-container-content-left1-card {
 				> :last-child {
 					padding: 0;
+					.semi-space {
+						width: 100%;
+					}
 				}
 				.workbeach-container-content-left1-card-item {
 					width: 33.33%;
