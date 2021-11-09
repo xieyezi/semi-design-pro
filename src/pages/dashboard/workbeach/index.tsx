@@ -115,15 +115,16 @@ const motion = [
 ]
 
 const option = {
+	legend: {
+		data: ['个人', '团队', '部门']
+	},
 	radar: {
 		shape: 'circle',
 		indicator: [
-			{ name: 'Sales', max: 6500 },
-			{ name: 'Administration', max: 16000 },
-			{ name: 'Information Technology', max: 30000 },
-			{ name: 'Customer Support', max: 38000 },
-			{ name: 'Development', max: 52000 },
-			{ name: 'Marketing', max: 25000 }
+			{ name: '热度', max: 6500 },
+			{ name: '口碑', max: 16000 },
+			{ name: '产量', max: 30000 },
+			{ name: '贡献', max: 38000 }
 		]
 	},
 	series: [
@@ -133,11 +134,15 @@ const option = {
 			data: [
 				{
 					value: [4200, 3000, 20000, 35000, 50000, 18000],
-					name: 'Allocated Budget'
+					name: '个人'
 				},
 				{
 					value: [5000, 14000, 28000, 26000, 42000, 21000],
-					name: 'Actual Spending'
+					name: '团队'
+				},
+				{
+					value: [4000, 15000, 22000, 17000, 36000, 29000],
+					name: '部门'
 				}
 			]
 		}

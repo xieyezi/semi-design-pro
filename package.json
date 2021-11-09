@@ -10,7 +10,7 @@
     "build:prod": "tsc && vite build --mode prod",
     "prepare": "husky install",
     "pre-commit": "yarn lint-staged",
-    "lint": "tsc --noEmit &&  eslint src --ext .ts,.tsx ",
+    "lint": "tsc --noEmit &&  eslint src --ext .ts,.tsx",
     "lint:fix": "tsc --noEmit && eslint --fix --ext src --ext .ts,.tsx",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\"",
     "commit": "git-cz"
