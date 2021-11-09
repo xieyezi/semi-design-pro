@@ -16,7 +16,7 @@
     "commit": "git-cz"
   },
   "dependencies": {
-    "@douyinfe/semi-ui": "^2.0.3",
+    "@douyinfe/semi-ui": "^2.0.4",
     "axios": "^0.24.0",
     "driver.js": "^0.9.8",
     "echarts": "^5.2.2",
