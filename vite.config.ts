@@ -4,7 +4,7 @@ import { resolve } from 'path'
 import { viteMockServe } from 'vite-plugin-mock'
 
 export default defineConfig({
-  resolve: {
+	resolve: {
 		alias: {
 			'@src': resolve(__dirname, './src'),
 			'@assets': resolve(__dirname, './src/assets'),
@@ -12,17 +12,18 @@ export default defineConfig({
 			'@pages': resolve(__dirname, './src/pages'),
 			'@uitls': resolve(__dirname, './src/uitls'),
 			'@styles': resolve(__dirname, './src/styles'),
-			'@config': resolve(__dirname, './src/config')
+			'@config': resolve(__dirname, './src/config'),
+			'@mock': resolve(__dirname, './mock')
 		}
 	},
-  plugins: [
-    react(),
-    viteMockServe({
+	plugins: [
+		react(),
+		viteMockServe({
 			mockPath: 'mock',
 			localEnabled: true
 		})
-  ],
-  build: {
+	],
+	build: {
 		target: 'es2015',
 		minify: 'terser',
 		cssCodeSplit: true,

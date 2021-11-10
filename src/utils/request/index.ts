@@ -87,7 +87,7 @@ export default async function request(options: requestOptions) {
 		}
 	}
 	delete newOptions.body
-	toogleLoading(url === '/other/show_status/' ? false : true)
+	toogleLoading(true)
 	const newUrl = (basePrefix || baseUrl) + url
 
 	return axios(newUrl, newOptions)

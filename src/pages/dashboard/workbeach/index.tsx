@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IconPlus } from '@douyinfe/semi-icons'
 import { Avatar, Descriptions, Col, Row, CardGroup, Card, Typography, List, Button } from '@douyinfe/semi-ui'
 import { chinaNumChar } from '@src/common'
@@ -6,132 +6,11 @@ import echarts from '@src/common/echarts'
 import ReactEChartsCore from 'echarts-for-react/lib/core'
 import { IconArrowUp, IconArrowDown } from '@douyinfe/semi-icons'
 import { Animated } from 'react-animated-css'
+import useStore from '@src/store/dashboard/workbeach'
 import './index.scss'
 
 const { Meta } = Card
 const { Text } = Typography
-const data = [
-	{ key: '项目数', value: '99' },
-	{
-		key: '团队内排名',
-		value: (
-			<span>
-				25/78
-				<span style={{ fontSize: '12px', fontWeight: 'normal', paddingLeft: '5px' }}>较昨天</span>
-				<IconArrowDown size="small" style={{ color: 'rgb(255,79,38)', marginLeft: '4px' }} />
-				<span style={{ fontSize: '12px', color: 'rgb(255,79,38)' }}>3</span>
-			</span>
-		)
-	},
-	{
-		key: '项目访问',
-		value: (
-			<span>
-				2233
-				<span style={{ fontSize: '12px', fontWeight: 'normal', paddingLeft: '5px' }}>较昨天</span>
-				<IconArrowUp size="small" style={{ color: 'rgb(59,179,70)', marginLeft: '4px' }} />
-				<span style={{ fontSize: '12px', color: 'rgb(59,179,70)' }}>43.2%</span>
-			</span>
-		)
-	}
-]
-
-const inProcessData = [
-	{
-		title: 'Vue',
-		icon: 'https://gw.alipayobjects.com/zos/rmsportal/ComBAopevLwENQdKWiIn.png',
-		description: '那是一种内在的东西，他们到达不了，也无法触及的',
-		group: '科学搬砖组',
-		time: '几秒前'
-	},
-	{
-		title: 'Angular',
-		icon: 'https://gw.alipayobjects.com/zos/rmsportal/zOsKZmFRdUtvpqCImOVY.png',
-		description: '希望是一个好东西，是最好的，好东西是不会消亡的',
-		group: '全组都是吴彦祖',
-		time: '1年前'
-	},
-	{
-		title: 'Semi Design',
-		icon: 'https://lf9-static.semi.design/obj/semi-tos/images/5c4bb380-3245-11ec-ab65-77a60c02a0b5.svg',
-		description: '城镇中有那么多的酒馆，她却偏偏走进了我的酒馆',
-		group: '中二少女团',
-		time: '几秒前'
-	},
-	{
-		title: 'WebPack',
-		icon: 'https://gw.alipayobjects.com/zos/rmsportal/nxkuOJlFJuAUhzlMTCEe.png',
-		description: '凛冬将至',
-		group: '高逼格设计天团',
-		time: '3月前'
-	},
-	{
-		title: 'Bootstrap',
-		icon: 'https://gw.alipayobjects.com/zos/rmsportal/siCrBXXhmvTQGWPNLBow.png',
-		description: '那时候我只会想自己想要什么，从不想自己拥有什么',
-		group: '程序员日常',
-		time: '1年前'
-	},
-	{
-		title: 'React',
-		icon: 'https://gw.alipayobjects.com/zos/rmsportal/kZzEzemZyKLKFsojXItE.png',
-		description: '生命就像一盒巧克力，结果往往出人意料',
-		group: '学计算机',
-		time: '2年前'
-	}
-]
-
-const motion = [
-	{
-		user: '曲丽丽',
-		group: '高逼格设计天团',
-		action: '新建项目',
-		project: '六月迭代',
-		color: 'purple'
-	},
-	{
-		user: '付芳芳',
-		group: '高逼格设计天团',
-		action: '新建项目',
-		project: '六月迭代',
-		color: 'blue'
-	},
-	{
-		user: '林东东',
-		group: '高逼格设计天团',
-		action: '新建项目',
-		project: '六月迭代',
-		color: 'cyan'
-	},
-	{
-		user: '苏小小',
-		group: '5月日常迭代',
-		action: '更新至已发布状态',
-		project: '',
-		color: 'orange'
-	},
-	{
-		user: '朱偏右',
-		group: '工程效能',
-		action: '发布了',
-		project: '留言',
-		color: 'amber'
-	},
-	{
-		user: '赵大大',
-		group: '工程效能',
-		action: '发布了',
-		project: '留言',
-		color: 'red'
-	},
-	{
-		user: '李冰冰',
-		group: '工程效能',
-		action: '发布了',
-		project: '留言',
-		color: 'light-green'
-	}
-]
 
 const option = {
 	color: ['#67e0e3', '#ffc0cb', '#b6a2de'],
@@ -178,6 +57,16 @@ const option = {
 }
 
 const Index: React.FC = () => {
+	const headerData = useStore((state) => state.headerData)
+	const inProcessData = useStore((state) => state.inProcessData)
+	const recentActivityData = useStore((state) => state.recentActivityData)
+
+	const getWorkBeachData = useStore((state) => state.getWorkBeachData)
+
+	useEffect(() => {
+		getWorkBeachData()
+	}, [])
+
 	return (
 		<div className="workbeach-container">
 			<Animated
@@ -204,7 +93,7 @@ const Index: React.FC = () => {
 							</div>
 						</div>
 						<div className="workbeach-container-header-content-right">
-							<Descriptions data={data} row />
+							<Descriptions data={headerData} row />
 						</div>
 					</div>
 				</div>
@@ -259,7 +148,7 @@ const Index: React.FC = () => {
 								<Card title="最近动态" headerExtraContent={<Text link>更多</Text>} bordered={false}>
 									<List
 										size="default"
-										dataSource={motion}
+										dataSource={recentActivityData}
 										renderItem={(item) => (
 											<List.Item
 												header={
@@ -321,7 +210,7 @@ const Index: React.FC = () => {
 									<Row>
 										{inProcessData.map((e) => {
 											return (
-												<Col span={12}>
+												<Col span={12} key={e.group}>
 													<div style={{ cursor: 'pointer' }}>
 														<Avatar size="extra-small" src={e.icon} style={{ margin: 15 }} />
 														{e.group}

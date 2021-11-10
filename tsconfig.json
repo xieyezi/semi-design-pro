@@ -24,7 +24,8 @@
 			"@config/*": ["src/config/*"],
 			"@uitls/*": ["src/uitls/*"],
 			"@pages/*": ["src/pages/*"],
-			"@styles/*": ["src/styles/*"]
+			"@styles/*": ["src/styles/*"],
+      "@mock/*": ["mock/*"]
 		}
 	},
 	"include": ["./src"]

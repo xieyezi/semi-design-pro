@@ -12,7 +12,7 @@
     "pre-commit": "yarn lint-staged",
     "lint": "tsc --noEmit &&  eslint src --ext .ts,.tsx",
     "lint:fix": "tsc --noEmit && eslint --fix --ext src --ext .ts,.tsx",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\"",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\" \"mock/**/*.ts\"",
     "commit": "git-cz"
   },
   "dependencies": {
