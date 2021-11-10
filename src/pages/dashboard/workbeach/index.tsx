@@ -4,7 +4,7 @@ import { Avatar, Descriptions, Col, Row, CardGroup, Card, Typography, List, Butt
 import { chinaNumChar } from '@src/common'
 import echarts from '@src/common/echarts'
 import ReactEChartsCore from 'echarts-for-react/lib/core'
-import { IconArrowUp } from '@douyinfe/semi-icons'
+import { IconArrowUp, IconArrowDown } from '@douyinfe/semi-icons'
 import { Animated } from 'react-animated-css'
 import './index.scss'
 
@@ -14,14 +14,23 @@ const data = [
 	{ key: '项目数', value: '99' },
 	{
 		key: '团队内排名',
-		value: '25/78'
+		value: (
+			<span>
+				25/78
+				<span style={{ fontSize: '12px', fontWeight: 'normal', paddingLeft: '5px' }}>较昨天</span>
+				<IconArrowDown size="small" style={{ color: 'rgb(255,79,38)', marginLeft: '4px' }} />
+				<span style={{ fontSize: '12px', color: 'rgb(255,79,38)' }}>3</span>
+			</span>
+		)
 	},
 	{
 		key: '项目访问',
 		value: (
 			<span>
 				2233
-				<IconArrowUp size="small" style={{ color: 'red', marginLeft: '4px' }} />
+				<span style={{ fontSize: '12px', fontWeight: 'normal', paddingLeft: '5px' }}>较昨天</span>
+				<IconArrowUp size="small" style={{ color: 'rgb(59,179,70)', marginLeft: '4px' }} />
+				<span style={{ fontSize: '12px', color: 'rgb(59,179,70)' }}>43.2%</span>
 			</span>
 		)
 	}
@@ -172,7 +181,7 @@ const Index: React.FC = () => {
 	return (
 		<div className="workbeach-container">
 			<Animated
-				animationIn="bounceInDown"
+				animationIn="slideInDown"
 				animationOut="fadeOut"
 				animationInDuration={1000}
 				animationOutDuration={1000}
@@ -204,9 +213,9 @@ const Index: React.FC = () => {
 				<Row gutter={24}>
 					<Col span={16}>
 						<Animated
-							animationIn="bounceInUp"
+							animationIn="slideInUp"
 							animationOut="fadeOut"
-							animationInDuration={1500}
+							animationInDuration={800}
 							animationOutDuration={500}
 							isVisible={true}
 						>
@@ -240,9 +249,9 @@ const Index: React.FC = () => {
 							</div>
 						</Animated>
 						<Animated
-							animationIn="bounceInUp"
+							animationIn="slideInUp"
 							animationOut="fadeOut"
-							animationInDuration={2000}
+							animationInDuration={800}
 							animationOutDuration={500}
 							isVisible={true}
 						>
@@ -280,9 +289,9 @@ const Index: React.FC = () => {
 					</Col>
 					<Col span={8}>
 						<Animated
-							animationIn="bounceInUp"
+							animationIn="slideInUp"
 							animationOut="fadeOut"
-							animationInDuration={2000}
+							animationInDuration={800}
 							animationOutDuration={500}
 							isVisible={true}
 						>
