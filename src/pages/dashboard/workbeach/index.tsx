@@ -5,6 +5,7 @@ import { chinaNumChar } from '@src/common'
 import echarts from '@src/common/echarts'
 import ReactEChartsCore from 'echarts-for-react/lib/core'
 import { IconArrowUp } from '@douyinfe/semi-icons'
+import { Animated } from 'react-animated-css'
 import './index.scss'
 
 const { Meta } = Card
@@ -170,126 +171,159 @@ const option = {
 const Index: React.FC = () => {
 	return (
 		<div className="workbeach-container">
-			<div className="workbeach-container-header">
-				<div className="workbeach-container-header-title">工作台</div>
-				<div className="workbeach-container-header-content">
-					<div className="workbeach-container-header-content-left">
-						<Avatar
-							src="https://sf6-cdn-tos.douyinstatic.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/root-web-sites/avatarDemo.jpeg"
-							style={{ margin: 4 }}
-							size="large"
-						/>
-						<div className="workbeach-container-header-content-left-user">
-							<p className="workbeach-container-header-content-left-username">早安，胡歌，祝你开心每一天！</p>
-							<p className="workbeach-container-header-content-left-user-profile">
-								前端专家 | 字节跳动－某某某事业群－某某平台部
-							</p>
+			<Animated
+				animationIn="bounceInDown"
+				animationOut="fadeOut"
+				animationInDuration={1000}
+				animationOutDuration={1000}
+				isVisible={true}
+			>
+				<div className="workbeach-container-header">
+					<div className="workbeach-container-header-title">工作台</div>
+					<div className="workbeach-container-header-content">
+						<div className="workbeach-container-header-content-left">
+							<Avatar
+								src="https://sf6-cdn-tos.douyinstatic.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/root-web-sites/avatarDemo.jpeg"
+								style={{ margin: 4 }}
+								size="large"
+							/>
+							<div className="workbeach-container-header-content-left-user">
+								<p className="workbeach-container-header-content-left-username">早安，胡歌，祝你开心每一天！</p>
+								<p className="workbeach-container-header-content-left-user-profile">
+									前端专家 | 字节跳动－某某某事业群－某某平台部
+								</p>
+							</div>
+						</div>
+						<div className="workbeach-container-header-content-right">
+							<Descriptions data={data} row />
 						</div>
 					</div>
-					<div className="workbeach-container-header-content-right">
-						<Descriptions data={data} row />
-					</div>
 				</div>
-			</div>
+			</Animated>
 			<div className="workbeach-container-content">
 				<Row gutter={24}>
 					<Col span={16}>
-						<div className="workbeach-container-content-left1">
-							<Card
-								title="进行中的项目"
-								className="workbeach-container-content-left1-card"
-								bordered={false}
-								headerExtraContent={<Text link>全部项目</Text>}
-							>
-								<CardGroup type="grid">
-									{inProcessData.map((v, idx) => (
-										<Card
-											key={idx}
-											shadows="hover"
-											headerLine={false}
-											className="workbeach-container-content-left1-card-item"
-											title={<Meta title={v.title} avatar={<Avatar size="default" src={v.icon} />} />}
-											footer={
-												<div className="workbeach-container-content-left1-card-item-footer">
-													<span>{v.group}</span>
-													<span>{v.time}</span>
-												</div>
-											}
-										>
-											{v.description}
-										</Card>
-									))}
-								</CardGroup>
-							</Card>
-						</div>
-						<div className="workbeach-container-content-left2">
-							<Card title="最近动态" headerExtraContent={<Text link>更多</Text>} bordered={false}>
-								<List
-									size="default"
-									dataSource={motion}
-									renderItem={(item) => (
-										<List.Item
-											header={
-												<Avatar size="default" color={item.color}>
-													{item.user.substring(1)}
-												</Avatar>
-											}
-											main={
-												<>
-													<div className="workbeach-container-content-left2-content">
-														{' '}
-														<span className="workbeach-container-content-left2-content-user">{item.user}</span> 在{' '}
-														<a className="workbeach-container-content-left2-content-link">{item.group}</a>{' '}
-														<span>{item.action}</span>{' '}
-														<a className="workbeach-container-content-left2-content-link">{item.project}</a>
+						<Animated
+							animationIn="bounceInUp"
+							animationOut="fadeOut"
+							animationInDuration={1500}
+							animationOutDuration={500}
+							isVisible={true}
+						>
+							<div className="workbeach-container-content-left1">
+								<Card
+									title="进行中的项目"
+									className="workbeach-container-content-left1-card"
+									bordered={false}
+									headerExtraContent={<Text link>全部项目</Text>}
+								>
+									<CardGroup type="grid">
+										{inProcessData.map((v, idx) => (
+											<Card
+												key={idx}
+												shadows="hover"
+												headerLine={false}
+												className="workbeach-container-content-left1-card-item"
+												title={<Meta title={v.title} avatar={<Avatar size="default" src={v.icon} />} />}
+												footer={
+													<div className="workbeach-container-content-left1-card-item-footer">
+														<span>{v.group}</span>
+														<span>{v.time}</span>
 													</div>
-													{'7分钟前'}
-												</>
-											}
-										/>
-									)}
-								/>
-							</Card>
-						</div>
+												}
+											>
+												{v.description}
+											</Card>
+										))}
+									</CardGroup>
+								</Card>
+							</div>
+						</Animated>
+						<Animated
+							animationIn="bounceInUp"
+							animationOut="fadeOut"
+							animationInDuration={2000}
+							animationOutDuration={500}
+							isVisible={true}
+						>
+							<div className="workbeach-container-content-left2">
+								<Card title="最近动态" headerExtraContent={<Text link>更多</Text>} bordered={false}>
+									<List
+										size="default"
+										dataSource={motion}
+										renderItem={(item) => (
+											<List.Item
+												header={
+													<Avatar size="default" color={item.color}>
+														{item.user.substring(1)}
+													</Avatar>
+												}
+												main={
+													<>
+														<div className="workbeach-container-content-left2-content">
+															{' '}
+															<span className="workbeach-container-content-left2-content-user">
+																{item.user}
+															</span> 在 <a className="workbeach-container-content-left2-content-link">{item.group}</a>{' '}
+															<span>{item.action}</span>{' '}
+															<a className="workbeach-container-content-left2-content-link">{item.project}</a>
+														</div>
+														{'7分钟前'}
+													</>
+												}
+											/>
+										)}
+									/>
+								</Card>
+							</div>
+						</Animated>
 					</Col>
 					<Col span={8}>
-						<div>
-							<Card title="快捷导航">
-								<Row>
-									{new Array(6).fill(null).map((_, index) => (
-										<Col span={6} key={index}>
-											<Button type="tertiary" theme="borderless">
-												操作{chinaNumChar[index + 1]}
-											</Button>
-										</Col>
-									))}
-									<Button icon={<IconPlus />}>添加</Button>
-								</Row>
-							</Card>
-							<Card title="销售指数" style={{ marginTop: '20px' }}>
-								<ReactEChartsCore
-									echarts={echarts}
-									option={option}
-									notMerge={true}
-									lazyUpdate={true}
-									style={{ height: '400px' }}
-								/>
-							</Card>
-							<Card title="团队" style={{ marginTop: '20px' }}>
-								<Row>
-									{inProcessData.map((e) => {
-										return (
-											<Col span={12}>
-												<div style={{ cursor: 'pointer' }}>
-													<Avatar size="extra-small" src={e.icon} style={{ margin: 15 }} />
-													{e.group}
-												</div>
+						<Animated
+							animationIn="bounceInUp"
+							animationOut="fadeOut"
+							animationInDuration={2000}
+							animationOutDuration={500}
+							isVisible={true}
+						>
+							<div>
+								<Card title="快捷导航">
+									<Row>
+										{new Array(6).fill(null).map((_, index) => (
+											<Col span={6} key={index}>
+												<Button type="tertiary" theme="borderless">
+													操作{chinaNumChar[index + 1]}
+												</Button>
 											</Col>
-										)
-									})}
-								</Row>
-							</Card>
-						</div>
+										))}
+										<Button icon={<IconPlus />}>添加</Button>
+									</Row>
+								</Card>
+								<Card title="销售指数" style={{ marginTop: '20px' }}>
+									<ReactEChartsCore
+										echarts={echarts}
+										option={option}
+										notMerge={true}
+										lazyUpdate={true}
+										style={{ height: '400px' }}
+									/>
+								</Card>
+								<Card title="团队" style={{ marginTop: '20px' }}>
+									<Row>
+										{inProcessData.map((e) => {
+											return (
+												<Col span={12}>
+													<div style={{ cursor: 'pointer' }}>
+														<Avatar size="extra-small" src={e.icon} style={{ margin: 15 }} />
+														{e.group}
+													</div>
+												</Col>
+											)
+										})}
+									</Row>
+								</Card>
+							</div>
+						</Animated>
 					</Col>
 				</Row>
 			</div>
