@@ -4,6 +4,7 @@ import { Avatar, Descriptions, Col, Row, CardGroup, Card, Typography, List, Butt
 import { chinaNumChar } from '@src/common'
 import echarts from '@src/common/echarts'
 import ReactEChartsCore from 'echarts-for-react/lib/core'
+import { IconArrowUp } from '@douyinfe/semi-icons'
 import './index.scss'
 
 const { Meta } = Card
@@ -14,7 +15,15 @@ const data = [
 		key: '团队内排名',
 		value: '25/78'
 	},
-	{ key: '项目访问', value: '2233' }
+	{
+		key: '项目访问',
+		value: (
+			<span>
+				2233
+				<IconArrowUp size="small" style={{ color: 'red', marginLeft: '4px' }} />
+			</span>
+		)
+	}
 ]
 
 const inProcessData = [
@@ -115,7 +124,9 @@ const motion = [
 ]
 
 const option = {
+	color: ['#67e0e3', '#ffc0cb', '#b6a2de'],
 	legend: {
+		bottom: 0,
 		data: ['个人', '团队', '部门']
 	},
 	radar: {
@@ -129,8 +140,15 @@ const option = {
 	},
 	series: [
 		{
-			name: 'Budget vs spending',
 			type: 'radar',
+			symbolSize: 0,
+			areaStyle: {
+				shadowBlur: 0,
+				shadowColor: 'rgba(0,0,0,.2)',
+				shadowOffsetX: 0,
+				shadowOffsetY: 10,
+				opacity: 1
+			},
 			data: [
 				{
 					value: [4200, 3000, 20000, 35000, 50000, 18000],
@@ -207,11 +225,15 @@ const Index: React.FC = () => {
 						<div className="workbeach-container-content-left2">
 							<Card title="最近动态" headerExtraContent={<Text link>更多</Text>} bordered={false}>
 								<List
-									size="large"
+									size="default"
 									dataSource={motion}
 									renderItem={(item) => (
 										<List.Item
-											header={<Avatar color={item.color}>{item.user.substring(1)}</Avatar>}
+											header={
+												<Avatar size="default" color={item.color}>
+													{item.user.substring(1)}
+												</Avatar>
+											}
 											main={
 												<>
 													<div className="workbeach-container-content-left2-content">
@@ -252,6 +274,20 @@ const Index: React.FC = () => {
 									lazyUpdate={true}
 									style={{ height: '400px' }}
 								/>
+							</Card>
+							<Card title="团队" style={{ marginTop: '20px' }}>
+								<Row>
+									{inProcessData.map((e) => {
+										return (
+											<Col span={12}>
+												<div style={{ cursor: 'pointer' }}>
+													<Avatar size="extra-small" src={e.icon} style={{ margin: 15 }} />
+													{e.group}
+												</div>
+											</Col>
+										)
+									})}
+								</Row>
 							</Card>
 						</div>
 					</Col>
