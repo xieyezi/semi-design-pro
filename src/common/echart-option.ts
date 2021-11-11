@@ -4,13 +4,15 @@ export const workbeachOption = {
 		bottom: 0,
 		data: ['个人', '团队', '部门']
 	},
+	tooltip: {},
 	radar: {
 		shape: 'circle',
+		splitNumber: 8,
 		indicator: [
-			{ name: '热度', max: 6500 },
-			{ name: '口碑', max: 16000 },
-			{ name: '产量', max: 30000 },
-			{ name: '贡献', max: 38000 }
+			{ text: '热度', max: 6500 },
+			{ text: '口碑', max: 16000 },
+			{ text: '产量', max: 30000 },
+			{ text: '贡献', max: 38000 }
 		]
 	},
 	series: [

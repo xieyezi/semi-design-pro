@@ -112,7 +112,7 @@ export default [
 	{
 		url: '/api/workbeach',
 		method: 'get',
-		timeout: 2000,
+		timeout: 500,
 		response: () => {
 			return {
 				code: 200,
