@@ -21,34 +21,35 @@ const Index: React.FC = () => {
 
 	const getWorkBeachData = useStore((state) => state.getWorkBeachData)
 
-
-  const formatHeaderData = useMemo(() => {
-    return headerData.map(e=> {
-      if(e.key=== '团队内排名') return {
-        key:e.key,
-        value: (
-          <span>
-            {e.value}
-            <span style={{ fontSize: '12px', fontWeight: 'normal', paddingLeft: '5px' }}>较昨天</span>
-            <IconArrowDown size="small" style={{ color: 'rgb(255,79,38)', marginLeft: '4px' }} />
-            <span style={{ fontSize: '12px', color: 'rgb(255,79,38)' }}>3</span>
-          </span>
-        )
-      }
-      else if(e.key === '项目访问') return {
-        ey:e.key,
-        value:(
-          <span>
-            {e.value}
-            <span style={{ fontSize: '12px', fontWeight: 'normal', paddingLeft: '5px' }}>较昨天</span>
-            <IconArrowUp size="small" style={{ color: 'rgb(59,179,70)', marginLeft: '4px' }} />
-            <span style={{ fontSize: '12px', color: 'rgb(59,179,70)' }}>43.23%</span>
-          </span>
-        )
-      }
-      return e
-    })
-  }, [headerData])
+	const formatHeaderData = useMemo(() => {
+		return headerData.map((e) => {
+			if (e.key === '团队内排名')
+				return {
+					key: e.key,
+					value: (
+						<span>
+							{e.value}
+							<span style={{ fontSize: '12px', fontWeight: 'normal', paddingLeft: '5px' }}>较昨天</span>
+							<IconArrowDown size="small" style={{ color: 'rgb(255,79,38)', marginLeft: '4px' }} />
+							<span style={{ fontSize: '12px', color: 'rgb(255,79,38)' }}>3</span>
+						</span>
+					)
+				}
+			else if (e.key === '项目访问')
+				return {
+					ey: e.key,
+					value: (
+						<span>
+							{e.value}
+							<span style={{ fontSize: '12px', fontWeight: 'normal', paddingLeft: '5px' }}>较昨天</span>
+							<IconArrowUp size="small" style={{ color: 'rgb(59,179,70)', marginLeft: '4px' }} />
+							<span style={{ fontSize: '12px', color: 'rgb(59,179,70)' }}>43.23%</span>
+						</span>
+					)
+				}
+			return e
+		})
+	}, [headerData])
 
 	useEffect(() => {
 		getWorkBeachData()
@@ -83,9 +84,9 @@ const Index: React.FC = () => {
 						<div className="workbeach-container-content-left1">
 							<Card
 								title="进行中的项目"
-								className="workbeach-container-content-left1-card"
+								className={loading ? '' : 'workbeach-container-content-left1-card'}
 								bordered={false}
-                loading={loading}
+								loading={loading}
 								headerExtraContent={<Text link>全部项目</Text>}
 							>
 								<CardGroup type="grid">
