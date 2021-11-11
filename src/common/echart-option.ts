@@ -1,3 +1,5 @@
+import echarts from '@src/common/echarts'
+
 export const workbeachOption = {
 	color: ['#67e0e3', '#ffc0cb', '#b6a2de'],
 	legend: {
@@ -40,6 +42,71 @@ export const workbeachOption = {
 					name: '部门'
 				}
 			]
+		}
+	]
+}
+
+export const anlyanisAccessOption = {
+	color: ['rgba(166,127,221)'],
+	tooltip: {
+		trigger: 'axis'
+	},
+	xAxis: [
+		{
+			type: 'category',
+			boundaryGap: false,
+			show: false
+		}
+	],
+	yAxis: [
+		{
+			type: 'value',
+			show: false
+		}
+	],
+	series: [
+		{
+			type: 'line',
+			smooth: true,
+			showSymbol: false,
+			areaStyle: {
+				opacity: 0.8,
+				color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+					{
+						offset: 0,
+						color: 'rgba(166,127,221)'
+					},
+					{
+						offset: 1,
+						color: 'rgba(226, 209, 224)'
+					}
+				])
+			},
+			emphasis: {
+				focus: 'series'
+			},
+			data: [2, 4, 6, 8, 4, 9, 5, 10, 7, 4, 6, 8, 12]
+		}
+	]
+}
+
+export const anlyanisPayOption = {
+	color: ['rgba(101,178,252,1)'],
+	tooltip: {
+		trigger: 'axis'
+	},
+	xAxis: {
+		type: 'category',
+		show: false
+	},
+	yAxis: {
+		type: 'value',
+		show: false
+	},
+	series: [
+		{
+			data: [2, 3, 5, 7, 8, 9, 5, 6, 3, 7, 9, 3, 4, 8, 4, 6],
+			type: 'bar'
 		}
 	]
 }

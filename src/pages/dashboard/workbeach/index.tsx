@@ -30,8 +30,8 @@ const Index: React.FC = () => {
 						<span>
 							{e.value}
 							<span style={{ fontSize: '12px', fontWeight: 'normal', paddingLeft: '5px' }}>较昨天</span>
-							<IconArrowDown size="small" style={{ color: 'rgb(255,79,38)', marginLeft: '4px' }} />
-							<span style={{ fontSize: '12px', color: 'rgb(255,79,38)' }}>3</span>
+							<IconArrowDown size="small" style={{ color: 'rgb(59,179,70)', marginLeft: '4px' }} />
+							<span style={{ fontSize: '12px', color: 'rgb(59,179,70)' }}>3</span>
 						</span>
 					)
 				}
@@ -42,8 +42,8 @@ const Index: React.FC = () => {
 						<span>
 							{e.value}
 							<span style={{ fontSize: '12px', fontWeight: 'normal', paddingLeft: '5px' }}>较昨天</span>
-							<IconArrowUp size="small" style={{ color: 'rgb(59,179,70)', marginLeft: '4px' }} />
-							<span style={{ fontSize: '12px', color: 'rgb(59,179,70)' }}>43.23%</span>
+							<IconArrowUp size="small" style={{ color: 'rgb(255,79,38)', marginLeft: '4px' }} />
+							<span style={{ fontSize: '12px', color: 'rgb(255,79,38)' }}>43.23%</span>
 						</span>
 					)
 				}
@@ -161,7 +161,7 @@ const Index: React.FC = () => {
 									option={workbeachOption}
 									notMerge={true}
 									lazyUpdate={true}
-									style={{ height: '400px' }}
+									style={{ height: 400 }}
 								/>
 							</Card>
 							<Card title="团队" style={{ marginTop: '20px' }} loading={loading}>

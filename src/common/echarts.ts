@@ -1,6 +1,6 @@
 import * as echarts from 'echarts/core'
 import {
-	// LineChart,
+	LineChart,
 	BarChart,
 	// PieChart,
 	// ScatterChart,
@@ -34,7 +34,7 @@ import {
 	// ParallelComponent,
 	// CalendarComponent,
 	// GraphicComponent,
-	// ToolboxComponent,
+	ToolboxComponent,
 	TooltipComponent,
 	// AxisPointerComponent,
 	// BrushComponent,
@@ -69,7 +69,9 @@ echarts.use([
 	LegendComponent,
 	RadarComponent,
 	GridComponent,
+	ToolboxComponent,
 	BarChart,
+	LineChart,
 	RadarChart,
 	CanvasRenderer
 ])
