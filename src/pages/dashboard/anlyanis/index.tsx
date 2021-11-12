@@ -1,17 +1,63 @@
 import React, { useState } from 'react'
-import { Col, Row, Card, Popover, Descriptions, Progress } from '@douyinfe/semi-ui'
+import {
+	Col,
+	Row,
+	Card,
+	Popover,
+	Descriptions,
+	Progress,
+	Tabs,
+	TabPane,
+	List,
+	Typography,
+	Avatar
+} from '@douyinfe/semi-ui'
 import { IconArrowDown, IconArrowUp, IconInfoCircle } from '@douyinfe/semi-icons'
 import echarts from '@src/common/echarts'
 import ReactEChartsCore from 'echarts-for-react/lib/core'
-import { anlyanisAccessOption, anlyanisPayOption } from '@src/common/echart-option'
+import { anlyanisAccessOption, anlyanisPayOption, anlyanisSalesOption } from '@src/common/echart-option'
 import './index.scss'
 
 const { Item } = Descriptions
+const { Title } = Typography
+
+const listData = [
+	{
+		key: '龙腾路',
+		value: '1,233'
+	},
+	{
+		key: '龙腾路',
+		value: '1,233'
+	},
+	{
+		key: '龙腾路',
+		value: '1,233'
+	},
+	{
+		key: '龙腾路',
+		value: '1,233'
+	},
+	{
+		key: '龙腾路',
+		value: '1,233'
+	},
+	{
+		key: '龙腾路',
+		value: '1,233'
+	},
+	{
+		key: '龙腾路',
+		value: '1,233'
+	}
+]
 
 const Index: React.FC = () => {
 	const [loading, setLoading] = useState(true)
+	const [secondCardActiveTab, setSecondCardActiveTab] = useState('1')
 
 	setTimeout(() => setLoading(false), 1000)
+
 	return (
 		<div className="anlyanis-container">
 			<div className="anlyanis-container-top-card">
@@ -117,7 +163,18 @@ const Index: React.FC = () => {
 							loading={loading}
 							footer={
 								<span>
-									转化率<span style={{ paddingLeft: 10 }}>64.34%</span>
+									<span>
+										周同比
+										<span style={{ paddingLeft: 10 }}>
+											12% <IconArrowUp size="small" style={{ color: 'rgb(255,79,38)' }} />
+										</span>
+									</span>
+									<span style={{ paddingLeft: 20 }}>
+										日同比
+										<span style={{ paddingLeft: 10 }}>
+											11% <IconArrowDown size="small" style={{ color: 'rgb(59,179,70)' }} />
+										</span>
+									</span>
 								</span>
 							}
 						>
@@ -136,6 +193,54 @@ const Index: React.FC = () => {
 						</Card>
 					</Col>
 				</Row>
+			</div>
+			<div className="anlyanis-container-second-card">
+				<Card
+					loading={loading}
+					title={
+						<Tabs activeKey={secondCardActiveTab}>
+							<TabPane tab="销售量" itemKey="1"></TabPane>
+							<TabPane tab="访问量" itemKey="2"></TabPane>
+						</Tabs>
+					}
+				>
+					<Row>
+						<Col span={16}>
+							<ReactEChartsCore
+								echarts={echarts}
+								option={anlyanisSalesOption}
+								notMerge={true}
+								lazyUpdate={true}
+								style={{ minHeight: 400 }}
+							/>
+						</Col>
+						<Col span={8}>
+							<List
+								header={
+									<div className="anlyanis-container-second-card-sales-card-header">
+										<Title heading={4}>门店销售额排名</Title>
+									</div>
+								}
+								dataSource={listData}
+								renderItem={(item, index) => (
+									<List.Item>
+										<div className="flex-between">
+											<div>
+												<Avatar size="extra-extra-small" style={{ backgroundColor: index <= 2 ? '#000' : '' }}>
+													{index + 1}
+												</Avatar>
+												<span style={{ paddingLeft: 10 }}>
+													{item.key} {index} 号店
+												</span>
+											</div>
+											<div>{item.value}</div>
+										</div>
+									</List.Item>
+								)}
+							/>
+						</Col>
+					</Row>
+				</Card>
 			</div>
 		</div>
 	)

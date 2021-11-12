@@ -110,3 +110,29 @@ export const anlyanisPayOption = {
 		}
 	]
 }
+
+export const anlyanisSalesOption = {
+	color: ['rgba(101,178,252,1)'],
+	tooltip: {
+		trigger: 'axis'
+	},
+	grid: {
+		top: 50,
+		left: 50,
+		right: 50,
+		bottom: 50
+	},
+	xAxis: {
+		type: 'category',
+		data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+	},
+	yAxis: {
+		type: 'value'
+	},
+	series: [
+		{
+			data: [368, 462, 562, 500, 640, 328, 732, 863, 635, 514, 780, 921],
+			type: 'bar'
+		}
+	]
+}

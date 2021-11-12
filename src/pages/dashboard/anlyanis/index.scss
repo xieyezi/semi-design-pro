@@ -6,4 +6,31 @@
 			line-height: 22px;
 		}
 	}
+	.anlyanis-container-second-card {
+		margin-top: 20px;
+		.semi-card-header-bordered {
+			border: 0px;
+		}
+		.semi-card-header {
+			padding: 0px;
+		}
+		.semi-tabs-bar {
+			padding-left: 20px;
+		}
+		.semi-list-item {
+			display: block;
+			border-bottom: 0px;
+			box-sizing: border-box;
+			padding: 12 px 24 px;
+			margin: 0;
+			list-style: none;
+		}
+		.anlyanis-container-second-card-sales-card-header h4 {
+			font-size: 14px;
+			margin-top: 0;
+			margin-bottom: 0.5em;
+			color: rgba(0, 0, 0, 0.85);
+			font-weight: 500;
+		}
+	}
 }
