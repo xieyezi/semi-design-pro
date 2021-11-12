@@ -11,6 +11,11 @@ const Index: FC = () => {
 	const locale = useStore((state) => state.locale)
 	const changeLocale = useStore((state) => state.changeLocale)
 
+	const selectLocale = (locale: 'zh_CN' | 'en_GB') => {
+		changeLocale(locale)
+		localStorage.setItem('semi_locale', locale)
+	}
+
 	const question = () => {
 		window.open('https://github.com/xieyezi/semi-design-pro/issues')
 	}
@@ -55,11 +60,11 @@ const Index: FC = () => {
 							</Avatar>
 						</Dropdown>
 
-						<RadioGroup type="button" buttonSize="large" defaultValue={'chinese'} style={{ marginLeft: '20px' }}>
-							<Radio value={'chinese'} onChange={() => changeLocale('zh_CN')}>
+						<RadioGroup type="button" buttonSize="large" defaultValue={locale} style={{ marginLeft: '20px' }}>
+							<Radio value={'zh_CN'} onChange={() => selectLocale('zh_CN')}>
 								中文
 							</Radio>
-							<Radio value={'english'} onChange={() => changeLocale('en_GB')}>
+							<Radio value={'en_GB'} onChange={() => selectLocale('en_GB')}>
 								EN
 							</Radio>
 						</RadioGroup>

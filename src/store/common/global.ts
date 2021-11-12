@@ -1,3 +1,4 @@
+import { getLocalStorage } from '@src/utils/storage'
 import create from 'zustand'
 
 export interface GlobalState {
@@ -8,7 +9,7 @@ export interface GlobalState {
 }
 
 const store = create<GlobalState>((set, get) => ({
-	locale: 'zh_CN',
+	locale: (getLocalStorage('semi_locale') as 'zh_CN' | 'en_GB') || 'zh_CN',
 	loading: false,
 	toogleLoading: (val = false) => set({ loading: val }),
 	changeLocale: (val: 'zh_CN' | 'en_GB') => {
