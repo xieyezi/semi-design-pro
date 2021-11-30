@@ -4,6 +4,7 @@ import { useRoutes } from 'react-router-dom'
 import { WrapperRouteComponent, WrapperRouteWithOutLayoutComponent } from './config'
 import LoginPage from '@pages/login'
 import LayoutPage from '@pages/layout'
+import Empty from '@components/empty'
 
 const DashboardWorkbeach = lazy(() => import('@src/pages/dashboard/workbeach'))
 const DashboardAnlyanis = lazy(() => import('@src/pages/dashboard/anlyanis'))
@@ -32,10 +33,6 @@ const UserCenter = lazy(() => import('@src/pages/user/center'))
 const UserSettings = lazy(() => import('@src/pages/user/settings'))
 
 const routeList: RouteObject[] = [
-	{
-		path: 'login',
-		element: <WrapperRouteWithOutLayoutComponent element={<LoginPage />} titleId="登录" />
-	},
 	{
 		path: '/',
 		element: <WrapperRouteComponent element={<LayoutPage />} titleId="" auth />,
@@ -116,13 +113,21 @@ const routeList: RouteObject[] = [
 			{
 				path: 'user/settings',
 				element: <WrapperRouteComponent element={<UserSettings />} titleId="用户设置页" auth />
-			},
-
-			{
-				path: '*',
-				element: <WrapperRouteComponent element={<Abnormal404 />} titleId="404" />
 			}
 		]
+	},
+	{
+		path: 'login',
+		element: <WrapperRouteWithOutLayoutComponent element={<LoginPage />} titleId="登录" />
+	},
+	{
+		path: '*',
+		element: (
+			<WrapperRouteWithOutLayoutComponent
+				element={<Empty title="找不到咯" description="这里什么也没有~" type="404" />}
+				titleId="404"
+			/>
+		)
 	}
 ]
 
