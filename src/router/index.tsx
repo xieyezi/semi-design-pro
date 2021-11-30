@@ -1,7 +1,7 @@
 import React, { lazy, FC } from 'react'
-import { PartialRouteObject } from 'react-router'
+import { RouteObject } from 'react-router'
 import { useRoutes } from 'react-router-dom'
-import WrapperRouteComponent from './config'
+import { WrapperRouteComponent, WrapperRouteWithOutLayoutComponent } from './config'
 import LoginPage from '@pages/login'
 import LayoutPage from '@pages/layout'
 
@@ -31,10 +31,10 @@ const Abnormal500 = lazy(() => import('@src/pages/abnormal/500'))
 const UserCenter = lazy(() => import('@src/pages/user/center'))
 const UserSettings = lazy(() => import('@src/pages/user/settings'))
 
-const routeList: PartialRouteObject[] = [
+const routeList: RouteObject[] = [
 	{
-		path: '/login',
-		element: <WrapperRouteComponent element={<LoginPage />} titleId="登录" />
+		path: 'login',
+		element: <WrapperRouteWithOutLayoutComponent element={<LoginPage />} titleId="登录" />
 	},
 	{
 		path: '/',
