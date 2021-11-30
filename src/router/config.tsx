@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
-import { Route } from 'react-router-dom'
-import { RouteProps } from 'react-router'
-import PrivateRoute from './pravateRoute'
+import { Navigate, RouteProps, useLocation } from 'react-router'
+import { RequireAuth } from '@src/router/auth'
 
 export interface WrapperRouteProps extends RouteProps {
 	/** document title id */
@@ -11,11 +10,21 @@ export interface WrapperRouteProps extends RouteProps {
 }
 
 const WrapperRouteComponent: FC<WrapperRouteProps> = ({ titleId, auth, ...props }) => {
-	const WitchRoute = auth ? PrivateRoute : Route
+	const location = useLocation()
 	if (titleId) {
-		document.title = `${titleId} - Semi Desgin Pro`
+		document.title = `${titleId}`
 	}
-	return <WitchRoute {...props} />
+	if (auth) {
+		// 私有访问
+		return location.pathname === '/' ? (
+			<Navigate to={{ pathname: `/dashboard/workbeach` }} replace />
+		) : (
+			<RequireAuth>{props.element}</RequireAuth>
+		)
+	} else {
+		// 公共访问
+		return props.element
+	}
 }
 
 export default WrapperRouteComponent
