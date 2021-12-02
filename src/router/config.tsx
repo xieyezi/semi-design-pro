@@ -1,7 +1,7 @@
 import React, { FC, Suspense } from 'react'
 import { Route } from 'react-router-dom'
 import { RouteProps } from 'react-router'
-import PrivateRoute from './pravateRoute'
+import PrivateRoute from './privateRoute'
 import SuspendFallbackLoading from '@src/components/fallback-loading'
 
 export interface WrapperRouteProps extends RouteProps {
