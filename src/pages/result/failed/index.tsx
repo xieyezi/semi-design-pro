@@ -1,5 +1,5 @@
 import React from 'react'
-import { Empty, Button } from '@douyinfe/semi-ui'
+import { Empty } from '@douyinfe/semi-ui'
 import { IllustrationFailure, IllustrationFailureDark } from '@douyinfe/semi-illustrations'
 
 const Index: React.FC = () => {
