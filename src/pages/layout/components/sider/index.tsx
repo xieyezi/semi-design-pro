@@ -77,6 +77,7 @@ const Index: FC = () => {
 	return (
 		<Sider style={{ backgroundColor: 'var(--semi-color-bg-1)' }}>
 			<Nav
+				bodyStyle={{ height: 500 }}
 				items={navList}
 				openKeys={openKeys}
 				selectedKeys={selectedKeys}
