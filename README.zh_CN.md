@@ -26,7 +26,6 @@ React Hooks + Vite + Semi + Zustand + Typescript 最佳实践🚀.
 $ git clone https://github.com/xieyezi/semi-design-pro
 $ cd semi-design-pro
 
-
 # yarn
 $ yarn install
 $ yarn dev
@@ -37,12 +36,11 @@ $ npm run dev
 ```
 
 ## 🔨 构建
-```
+```bash
 # yarn
 $ yarn install
 $ yarn build
 
-```bash
 # npm
 $ npm install
 $ npm run build
@@ -57,6 +55,7 @@ Modern browsers and Internet Explorer 10+.
 | IE11, Edge                                                                                                                                                                                                      | last 2 versions                                                                                                                                                                                                   | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                           | last 2 versions                                                                                                                                                                                                       |
 
 ## 🤝 贡献
+<a href="https://github.com/xieyezi/semi-design-pro/graphs/contributors"><img src="https://contrib.rocks/image?repo=xieyezi/semi-design-pro" /></a>
 
 我们非常欢迎您的贡献，您可以通过以下方式与我们共建 😃
 
