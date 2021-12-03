@@ -27,7 +27,6 @@ developing...
 $ git clone https://github.com/xieyezi/semi-design-pro
 $ cd semi-design-pro
 
-
 # yarn
 $ yarn install
 $ yarn dev
@@ -38,15 +37,14 @@ $ npm run dev
 ```
 
 ## 🔨 Build
-```
+```bash
 # yarn
 $ yarn install
-$ yarn build
+$ yarn build:dev
 
-```bash
 # npm
 $ npm install
-$ npm run build
+$ npm run build:dev
 ```
 
 ## 🖥 Browsers support
