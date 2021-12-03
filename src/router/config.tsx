@@ -1,5 +1,4 @@
 import React, { FC, Suspense } from 'react'
-import { Route } from 'react-router-dom'
 import { RouteProps } from 'react-router'
 import PrivateRoute from './pravateRoute'
 import SuspendFallbackLoading from '@src/components/fallback-loading'
