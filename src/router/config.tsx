@@ -1,5 +1,4 @@
 import React, { FC, Suspense } from 'react'
-import { Route } from 'react-router-dom'
 import { RouteProps } from 'react-router'
 import PrivateRoute from './privateRoute'
 import SuspendFallbackLoading from '@src/components/fallback-loading'
@@ -11,8 +10,12 @@ export interface WrapperRouteProps extends RouteProps {
 	auth?: boolean
 }
 
+const PublicRoute = (props) => {
+	return props.element
+}
+
 const WrapperRouteComponent: FC<WrapperRouteProps> = ({ titleId, auth, ...props }) => {
-	const WitchRoute = auth ? PrivateRoute : Route
+	const WitchRoute = auth ? PrivateRoute : PublicRoute
 	if (titleId) {
 		document.title = titleId
 	}
