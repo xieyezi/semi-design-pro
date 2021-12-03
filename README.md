@@ -56,6 +56,7 @@ Modern browsers and Internet Explorer 10+.
 | IE11, Edge                                                                                                                                                                                                      | last 2 versions                                                                                                                                                                                                   | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                           | last 2 versions                                                                                                                                                                                                       |
 
 ## 🤝 Contributing
+<a href="https://github.com/xieyezi/semi-design-pro/graphs/contributors"><img src="https://contrib.rocks/image?repo=xieyezi/semi-design-pro" /></a>
 
 We very much welcome your contribution, you can build together with us in the following ways 😃
 
