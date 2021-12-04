@@ -1,0 +1,22 @@
+{
+  "name": "@semi-design-pro/admin-generator",
+  "version": "0.0.7",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && tsc"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "devDependencies": {
+    "@modern-js/codesmith": "^2.13.1",
+    "@types/node": "^10"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@modern-js/codesmith-api-app": "^1.0.6"
+  }
+}
