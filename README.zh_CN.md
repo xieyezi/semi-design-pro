@@ -1,6 +1,6 @@
 English | [简体中文](./README.zh_CN.md)
 
-<h1 align="center">Semi Admin</h1>
+<h1 align="center">React Semi Admin</h1>
 
 
 React Hooks + Vite + Semi + Zustand + Typescript 最佳实践🚀.
