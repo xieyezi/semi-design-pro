@@ -11,6 +11,10 @@
 	}
 	.layout-header {
 		background-color: var(--semi-color-bg-1);
+		.semi-navigation-horizontal {
+			height: 50px;
+			border-bottom: 0px;
+		}
 	}
 	.semi-badge-rightTop {
 		position: absolute;
@@ -23,5 +27,12 @@
 		font-weight: 600;
 		background: var(--semi-color-bg-3);
 		color: var(--semi-color-text-1);
+	}
+
+	.semi-navigation-vertical .semi-navigation-header-list-outer {
+		overflow-y: scroll;
+	}
+	.semi-navigation-vertical .semi-navigation-header-list-outer::-webkit-scrollbar {
+		width: 0;
 	}
 }
