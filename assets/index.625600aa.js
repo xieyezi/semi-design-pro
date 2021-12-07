@@ -1,0 +1,1 @@
+import{j as a,E as e,ad as t,ae as s}from"./vendor.aa8d7a10.js";const d=()=>a(e,{title:"404",image:a(t,{style:{width:400,height:400}}),darkModeImage:a(s,{style:{width:400,height:400}}),description:"404 页面未找到"});export{d as default};

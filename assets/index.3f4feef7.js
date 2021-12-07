@@ -1,0 +1,1 @@
+import{j as a,E as t,aa as e,ab as s}from"./vendor.aa8d7a10.js";const i=()=>a(t,{title:"500",image:a(e,{style:{width:400,height:400}}),darkModeImage:a(s,{style:{width:400,height:400}}),description:"500 服务器异常"});export{i as default};

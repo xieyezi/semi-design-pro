@@ -1,0 +1,1 @@
+import{j as a,E as t,S as e,ac as s}from"./vendor.aa8d7a10.js";const i=()=>a(t,{title:"403",image:a(e,{style:{width:400,height:400}}),darkModeImage:a(s,{style:{width:400,height:400}}),description:"403 无权限访问"});export{i as default};
