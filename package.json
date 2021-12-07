@@ -12,15 +12,14 @@
     "pre-commit": "yarn lint-staged",
     "lint": "tsc --noEmit &&  eslint src --ext .ts,.tsx",
     "lint:fix": "tsc --noEmit && eslint --fix --ext src --ext .ts,.tsx",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\" \"mock/**/*.ts\"",
-    "commit": "git-cz"
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\" \"mock/**/*.ts\""
   },
   "dependencies": {
     "@douyinfe/semi-ui": "^2.1.1",
     "axios": "^0.24.0",
     "driver.js": "^0.9.8",
     "echarts": "^5.2.2",
-    "echarts-for-react": "^3.0.",
+    "echarts-for-react": "^3.0.0",
     "history": "^5.0.1",
     "husky": "^7.0.4",
     "react": "^17.0.2",
@@ -30,7 +29,6 @@
     "zustand": "^3.6.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.2.1",
     "@types/node": "^16.11.6",
     "@types/qs": "^6.9.7",
     "@types/react": "^17.0.0",
@@ -38,9 +36,6 @@
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
     "@vitejs/plugin-react": "^1.0.0",
-    "commitizen": "^4.2.4",
-    "commitlint-config-cz": "^0.13.2",
-    "cz-customizable": "^6.3.0",
     "eslint": "^8.1.0",
     "lint-staged": "^11.2.6",
     "mockjs": "^1.1.0",
@@ -51,10 +46,5 @@
     "typescript": "^4.3.2",
     "vite": "^2.6.4",
     "vite-plugin-mock": "^2.9.6"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
-    }
   }
 }
