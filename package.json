@@ -12,7 +12,8 @@
     "pre-commit": "yarn lint-staged",
     "lint": "tsc --noEmit &&  eslint src --ext .ts,.tsx",
     "lint:fix": "tsc --noEmit && eslint --fix --ext src --ext .ts,.tsx",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\" \"mock/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\" \"mock/**/*.ts\"",
+    "github-pages": "tsc && vite build --mode prod --config ./vite.deploy.ts"
   },
   "dependencies": {
     "@douyinfe/semi-ui": "^2.1.1",
