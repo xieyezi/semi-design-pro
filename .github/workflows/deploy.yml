@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [17.0.1]
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: npm run build:prod
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3	
+        with:
+          external_repository: xieyezi/semi-design-pro
+          personal_token: ${{ secrets.ACTION_ACCESS_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages

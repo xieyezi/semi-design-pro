@@ -3,6 +3,7 @@ import { Layout, Nav, Button, Avatar, Badge, Dropdown, RadioGroup, Radio } from 
 import { IconBell, IconHelpCircle } from '@douyinfe/semi-icons'
 import Breadcrumb from '../breadcrumb'
 import useStore from '@src/store/common/global'
+import Tags from '../tags'
 import '../../index.scss'
 
 const { Header } = Layout
@@ -38,7 +39,7 @@ const Index: FC = () => {
 						<Badge count={5} type="danger">
 							<Button
 								theme="borderless"
-								icon={<IconBell size="large" />}
+								icon={<IconBell />}
 								style={{
 									color: 'var(--semi-color-text-2)',
 									marginRight: '12px'
@@ -60,7 +61,7 @@ const Index: FC = () => {
 							</Avatar>
 						</Dropdown>
 
-						<RadioGroup type="button" buttonSize="large" defaultValue={locale} style={{ marginLeft: '20px' }}>
+						<RadioGroup type="button" defaultValue={locale} style={{ marginLeft: '20px' }}>
 							<Radio value={'zh_CN'} onChange={() => selectLocale('zh_CN')}>
 								中文
 							</Radio>
@@ -71,6 +72,7 @@ const Index: FC = () => {
 					</>
 				}
 			></Nav>
+			<Tags />
 		</Header>
 	)
 }
