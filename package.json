@@ -31,7 +31,6 @@
 "zustand": "^3.6.1"
 },
 "devDependencies": {
-"@commitlint/cli": "^13.2.1",
 "@types/node": "^16.11.6",
 "@types/qs": "^6.9.7",
 "@types/react": "^17.0.0",
@@ -39,9 +38,6 @@
 "@typescript-eslint/eslint-plugin": "^5.2.0",
 "@typescript-eslint/parser": "^5.2.0",
 "@vitejs/plugin-react": "^1.0.0",
-"commitizen": "^4.2.4",
-"commitlint-config-cz": "^0.13.2",
-"cz-customizable": "^6.3.0",
 "eslint": "^8.1.0",
 "lint-staged": "^11.2.6",
 "mockjs": "^1.1.0",
