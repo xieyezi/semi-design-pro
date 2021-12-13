@@ -1,10 +1,9 @@
-import React, { lazy, FC } from 'react'
+import React, { FC, lazy } from 'react'
 import { RouteObject } from 'react-router'
 import { useRoutes } from 'react-router-dom'
-import { WrapperRouteComponent, WrapperRouteWithOutLayoutComponent } from './config'
+import WrapperRouteComponent from './config'
 import LoginPage from '@pages/login'
 import LayoutPage from '@pages/layout'
-import Empty from '@components/empty'
 
 const DashboardWorkbeach = lazy(() => import('@src/pages/dashboard/workbeach'))
 const DashboardAnlyanis = lazy(() => import('@src/pages/dashboard/anlyanis'))
@@ -33,6 +32,10 @@ const UserCenter = lazy(() => import('@src/pages/user/center'))
 const UserSettings = lazy(() => import('@src/pages/user/settings'))
 
 const routeList: RouteObject[] = [
+	{
+		path: '/login',
+		element: <WrapperRouteComponent element={<LoginPage />} titleId="登录" />
+	},
 	{
 		path: '/',
 		element: <WrapperRouteComponent element={<LayoutPage />} titleId="" auth />,
@@ -113,27 +116,18 @@ const routeList: RouteObject[] = [
 			{
 				path: 'user/settings',
 				element: <WrapperRouteComponent element={<UserSettings />} titleId="用户设置页" auth />
+			},
+
+			{
+				path: '*',
+				element: <WrapperRouteComponent element={<Abnormal404 />} titleId="404" />
 			}
 		]
-	},
-	{
-		path: 'login',
-		element: <WrapperRouteWithOutLayoutComponent element={<LoginPage />} titleId="登录" />
-	},
-	{
-		path: '*',
-		element: (
-			<WrapperRouteWithOutLayoutComponent
-				element={<Empty title="找不到咯" description="这里什么也没有~" type="404" />}
-				titleId="404"
-			/>
-		)
 	}
 ]
 
 const RenderRouter: FC = () => {
-	const element = useRoutes(routeList)
-	return element
+	return useRoutes(routeList)
 }
 
 export default RenderRouter

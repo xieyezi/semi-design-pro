@@ -1,7 +1,6 @@
-import React, { FC, Suspense } from 'react'
-import { RouteProps } from 'react-router'
-import PrivateRoute from './privateRoute'
-import SuspendFallbackLoading from '@src/components/fallback-loading'
+import React, { FC } from 'react'
+import { Navigate, RouteProps, useLocation } from 'react-router'
+import { RequireAuth } from '@src/router/auth'
 
 export interface WrapperRouteProps extends RouteProps {
 	/** document title id */
@@ -10,24 +9,22 @@ export interface WrapperRouteProps extends RouteProps {
 	auth?: boolean
 }
 
-const PublicRoute = (props) => {
-	return props.element
-}
-
 const WrapperRouteComponent: FC<WrapperRouteProps> = ({ titleId, auth, ...props }) => {
-	const WitchRoute = auth ? PrivateRoute : PublicRoute
+	const location = useLocation()
 	if (titleId) {
-		document.title = titleId
+		document.title = `${titleId}`
 	}
-	return <WitchRoute {...props} />
+	if (auth) {
+		// 私有访问
+		return location.pathname === '/' ? (
+			<Navigate to={{ pathname: `/dashboard/workbeach` }} replace />
+		) : (
+			<RequireAuth>{props.element}</RequireAuth>
+		)
+	} else {
+		// 公共访问
+		return props.element
+	}
 }
 
-const WrapperRouteWithOutLayoutComponent: FC<WrapperRouteProps> = ({ titleId, auth, ...props }) => {
-	if (titleId) {
-		document.title = titleId
-	}
-
-	return <Suspense fallback={<SuspendFallbackLoading message="正在加载中" />}>{props.element}</Suspense>
-}
-
-export { WrapperRouteComponent, WrapperRouteWithOutLayoutComponent }
+export default WrapperRouteComponent

@@ -402,7 +402,7 @@
 
 "@douyinfe/semi-animation-react@2.1.1":
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@douyinfe/semi-animation-react/-/semi-animation-react-2.1.1.tgz#5d9049baab357bd32d2bcf06b5d83bf3f81ba33c"
+  resolved "https://registry.npmmirror.com/@douyinfe/semi-animation-react/download/@douyinfe/semi-animation-react-2.1.1.tgz#5d9049baab357bd32d2bcf06b5d83bf3f81ba33c"
   integrity sha512-DpoHTFR9MDaKdLcq0i9PoWZtHorHuHJkkU16RbXinwDXGDXC3z1Duo1UYcCzxNxCXlGWdtT8UAm+DLJ3Hv02Dw==
   dependencies:
     "@babel/runtime-corejs3" "^7.15.4"
@@ -412,14 +412,14 @@
 
 "@douyinfe/semi-animation-styled@2.1.1":
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@douyinfe/semi-animation-styled/-/semi-animation-styled-2.1.1.tgz#250511cc0882ef59e008a80ccfc2a2e279a811ff"
+  resolved "https://registry.npmmirror.com/@douyinfe/semi-animation-styled/download/@douyinfe/semi-animation-styled-2.1.1.tgz#250511cc0882ef59e008a80ccfc2a2e279a811ff"
   integrity sha512-AUwVRqN4bedKMTTYROjTdL7s9uqbPkwmTUSqQnEn/SdR8Zg6SUu0njXNk4cgy3SfLlzTgUy2yX2wrs1z7ALeMg==
   dependencies:
     "@babel/runtime-corejs3" "^7.15.4"
 
 "@douyinfe/semi-animation@2.1.1":
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@douyinfe/semi-animation/-/semi-animation-2.1.1.tgz#7046853ad1ece4144417c35288909e8523eaf92f"
+  resolved "https://registry.npmmirror.com/@douyinfe/semi-animation/download/@douyinfe/semi-animation-2.1.1.tgz#7046853ad1ece4144417c35288909e8523eaf92f"
   integrity sha512-6ZPSLMvUIjm7FHeg2mz5N5ShF6uSI3dUxyUO1MD5fie/R+a2MnQ/Y/29GCNZmIDUGfFuvsqLzO+MiG8Sds3M6g==
   dependencies:
     "@babel/runtime-corejs3" "^7.15.4"
@@ -427,7 +427,7 @@
 
 "@douyinfe/semi-foundation@2.1.1":
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@douyinfe/semi-foundation/-/semi-foundation-2.1.1.tgz#3caac9c534f0bcf839a6656d035afad954147163"
+  resolved "https://registry.npmmirror.com/@douyinfe/semi-foundation/download/@douyinfe/semi-foundation-2.1.1.tgz#3caac9c534f0bcf839a6656d035afad954147163"
   integrity sha512-NL9s5qJJR3y6Tg9PgfFQwgJ4Acl3YPPYcjH3UVLJvTSskikOgXaAxV13STh3RYz2XXmSiU5LqX1hIsoa+BlDcg==
   dependencies:
     "@babel/runtime-corejs3" "^7.15.4"
@@ -442,7 +442,7 @@
 
 "@douyinfe/semi-icons@2.1.1":
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@douyinfe/semi-icons/-/semi-icons-2.1.1.tgz#bbfb69a1b5a8f74c46fbf4a61dd316df134b826c"
+  resolved "https://registry.npmmirror.com/@douyinfe/semi-icons/download/@douyinfe/semi-icons-2.1.1.tgz#bbfb69a1b5a8f74c46fbf4a61dd316df134b826c"
   integrity sha512-d760ta0F6DyHLTpEp9hiMjGsiWzdCr0mO505eSQyq/+0KM0n6dEGQht9urQzf++9ctSWRtIzm99z0a4tl+9X1w==
   dependencies:
     "@babel/runtime-corejs3" "^7.15.4"
@@ -450,21 +450,21 @@
 
 "@douyinfe/semi-illustrations@2.1.1":
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@douyinfe/semi-illustrations/-/semi-illustrations-2.1.1.tgz#d1c0d66049829043fcc9e625b81310dd0b2c2ff7"
+  resolved "https://registry.npmmirror.com/@douyinfe/semi-illustrations/download/@douyinfe/semi-illustrations-2.1.1.tgz#d1c0d66049829043fcc9e625b81310dd0b2c2ff7"
   integrity sha512-qVxgFW5zktus5XdENMrjQK8RybnafOlpvxwrRcpLZtGbuWx0tPAfeRcJ0nBFQoKfTsmFKknsBYlSXlfk15uczQ==
   dependencies:
     "@babel/runtime-corejs3" "^7.15.4"
 
 "@douyinfe/semi-theme-default@2.1.1":
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@douyinfe/semi-theme-default/-/semi-theme-default-2.1.1.tgz#953c5a5e8760fdaf0b12db1052e8d83b6258f986"
+  resolved "https://registry.npmmirror.com/@douyinfe/semi-theme-default/download/@douyinfe/semi-theme-default-2.1.1.tgz#953c5a5e8760fdaf0b12db1052e8d83b6258f986"
   integrity sha512-ecaz3xKleaIHoyDzpf0UQpNEtLr6ob6ZYktXxGONjYDFLul28UWbtya1yZkobU4jgJxNlF9gocCnj6H5sZHM4g==
   dependencies:
     glob "^7.1.6"
 
 "@douyinfe/semi-ui@^2.1.1":
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@douyinfe/semi-ui/-/semi-ui-2.1.1.tgz#2184bbeb9daeb4eb4bcd249ad0bd30869c1f8029"
+  resolved "https://registry.npmmirror.com/@douyinfe/semi-ui/download/@douyinfe/semi-ui-2.1.1.tgz#2184bbeb9daeb4eb4bcd249ad0bd30869c1f8029"
   integrity sha512-/F3qd/wf28N0Q+y83KrUhKU+LFkhTQ8hOfstHMvZq0WU9TO08uv66RCIJ3YHXv+LXyDZPt+/4vn28mYZXtB8CA==
   dependencies:
     "@babel/runtime-corejs3" "^7.15.4"
@@ -708,8 +708,8 @@
 
 "@types/react-window@^1.8.2":
   version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@types/react-window/-/react-window-1.8.5.tgz#285fcc5cea703eef78d90f499e1457e9b5c02fc1"
-  integrity sha512-V9q3CvhC9Jk9bWBOysPGaWy/Z0lxYcTXLtLipkt2cnRj1JOSFNF7wqGpkScSXMgBwC+fnVRg/7shwgddBG5ICw==
+  resolved "https://registry.npmmirror.com/@types/react-window/download/@types/react-window-1.8.5.tgz#285fcc5cea703eef78d90f499e1457e9b5c02fc1"
+  integrity sha1-KF/MXOpwPu942Q9JnhRX6bXAL8E=
   dependencies:
     "@types/react" "*"
 
@@ -1429,7 +1429,7 @@ driver.js@^0.9.8:
   resolved "https://registry.yarnpkg.com/driver.js/-/driver.js-0.9.8.tgz#4b327f4537b1c9b9fb19419de86174be821ae32a"
   integrity sha512-bczjyKdX6XmFyCDkwtRmlaORDwfBk1xXmRO0CAe5VwNQTM98aWaG2LAIiIdTe53iV/B7W5lXlIy2xYtf0JRb7Q==
 
-echarts-for-react@^3.0.:
+echarts-for-react@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/echarts-for-react/-/echarts-for-react-3.0.2.tgz#ac5859157048a1066d4553e34b328abb24f2b7c1"
   integrity sha512-DRwIiTzx8JfwPOVgGttDytBqdp5VzCSyMRIxubgU/g2n9y3VLUmF2FK7Icmg/sNVkv4+rktmrLN9w22U2yy3fA==
@@ -2108,17 +2108,10 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-history@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/history/-/history-5.0.1.tgz#de35025ed08bce0db62364b47ebbf9d97b5eb06a"
-  integrity sha512-5qC/tFUKfVci5kzgRxZxN5Mf1CV8NmJx9ByaPX0YTLx5Vz3Svh7NYp6eA4CpDq4iA9D0C1t8BNIfvQIrUI3mVw==
-  dependencies:
-    "@babel/runtime" "^7.7.6"
-
-history@^5.1.0:
+history@^5.0.3, history@^5.1.0:
   version "5.1.0"
-  resolved "https://registry.yarnpkg.com/history/-/history-5.1.0.tgz#2e93c09c064194d38d52ed62afd0afc9d9b01ece"
-  integrity sha512-zPuQgPacm2vH2xdORvGGz1wQMuHSIB56yNAy5FnLuwOwgSYyPKptJtcMm6Ev+hRGeS+GzhbmRacHzvlESbFwDg==
+  resolved "https://registry.npmmirror.com/history/download/history-5.1.0.tgz#2e93c09c064194d38d52ed62afd0afc9d9b01ece"
+  integrity sha1-LpPAnAZBlNONUu1ir9CvydmwHs4=
   dependencies:
     "@babel/runtime" "^7.7.6"
 
@@ -2949,8 +2942,8 @@ quick-lru@^4.0.1:
 
 react-dom@^17.0.2:
   version "17.0.2"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
-  integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
+  resolved "https://registry.npmmirror.com/react-dom/download/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
+  integrity sha1-7P+2hF462Nv83EmPDQqTlzZQLCM=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -3000,7 +2993,7 @@ react-resizable@^1.8.0:
 
 react-router-dom@6.0.2:
   version "6.0.2"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.0.2.tgz#860cefa697b9d4965eced3f91e82cdbc5995f3ad"
+  resolved "https://registry.npmmirror.com/react-router-dom/download/react-router-dom-6.0.2.tgz?cache=0&sync_timestamp=1636499761778&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact-router-dom%2Fdownload%2Freact-router-dom-6.0.2.tgz#860cefa697b9d4965eced3f91e82cdbc5995f3ad"
   integrity sha512-cOpJ4B6raFutr0EG8O/M2fEoyQmwvZWomf1c6W2YXBZuFBx8oTk/zqjXghwScyhfrtnt0lANXV2182NQblRxFA==
   dependencies:
     history "^5.1.0"
@@ -3008,7 +3001,7 @@ react-router-dom@6.0.2:
 
 react-router@6.0.2:
   version "6.0.2"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.0.2.tgz#bd2b0fa84fd1d152671e9f654d9c0b1f5a7c86da"
+  resolved "https://registry.npmmirror.com/react-router/download/react-router-6.0.2.tgz#bd2b0fa84fd1d152671e9f654d9c0b1f5a7c86da"
   integrity sha512-8/Wm3Ed8t7TuedXjAvV39+c8j0vwrI5qVsYqjFr5WkJjsJpEvNSoLRUbtqSEYzqaTUj1IV+sbPJxvO+accvU0Q==
   dependencies:
     history "^5.1.0"

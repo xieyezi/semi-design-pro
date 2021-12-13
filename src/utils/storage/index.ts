@@ -9,3 +9,15 @@ export function getLocalStorage(key: string) {
 export function removeLocalStorage(key: string) {
 	return localStorage.removeItem(key)
 }
+
+export function setSessionStorage(key: string, value: string) {
+	sessionStorage.setItem(key, value)
+}
+
+export function getSessionStorage(key: string) {
+	return sessionStorage.getItem(key)
+}
+
+export function removeSessionStorage(key: string) {
+	return sessionStorage.removeItem(key)
+}
